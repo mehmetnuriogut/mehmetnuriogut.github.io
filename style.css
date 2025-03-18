@@ -94,8 +94,9 @@ nav {
 
 /* Home Section */
 .home-section {
+    margin-top: 150px;
     padding: 2.5rem 0.25rem 1rem;
-    min-height: calc(100vh - 70px);
+    min-height: auto; /* or a specific smaller value */
     display: flex;
     align-items: flex-start;
 }
@@ -193,31 +194,19 @@ nav {
     color: var(--accent);
 }
 
-/* About Section */
-.about-section {
-    padding: 1.5rem 0.5rem;
-    background: rgba(22, 27, 34, 0.7);
-}
 
-.about-content {
-    max-width: 800px;
-    margin: 0 auto;
-    color: var(--text-secondary);
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
 
 /* Projects Section */
 .projects-section {
-    padding: 1.5rem 0.5rem;
-    margin-top: -250px;
+    padding: 2rem 1rem;
+    margin-top: 0;
 }
 
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .project-card {
@@ -607,33 +596,30 @@ footer {
         align-items: center;
     }
 
-    .projects-grid, .apps-grid {
-        grid-template-columns: 1fr;
+    .projects-grid {
+        gap: 1.5rem;
     }
 
-    .project-card, .app-card {
-        padding: 1.5rem;
-    }
-
-    .project-image img, .app-logo {
-        width: 80px;
-        height: 80px;
+    .project-card {
+        margin-bottom: 1.5rem;
     }
 
     .projects-section {
-        margin-top: 0;
+        padding: 1.5rem 1rem;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .projects-section {
-        margin-top: -125px;
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
-@media (min-width: 1025px) and (max-width: 1600px) {
-    .projects-section {
-        margin-top: -200px;
+@media (min-width: 1025px) {
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
@@ -674,9 +660,6 @@ footer {
         align-items: center;
     }
 
-    .about-content {
-        padding: 0 1rem;
-    }
 
     .apps-section {
         padding: 4rem 1rem;
