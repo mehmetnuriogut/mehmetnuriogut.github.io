@@ -94,7 +94,7 @@ nav {
 
 /* Home Section */
 .home-section {
-    padding: 10rem 1rem 4rem;
+    padding: 2.5rem 0.25rem 1rem;
     min-height: calc(100vh - 70px);
     display: flex;
     align-items: flex-start;
@@ -141,14 +141,15 @@ nav {
     flex-grow: 0;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
+    align-items: center;
+    text-align: center;
 }
 
 .profile-info h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
     color: var(--text-primary);
+    text-align: left;
 }
 
 .profile-info h2 {
@@ -169,6 +170,9 @@ nav {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .contact-link {
@@ -178,6 +182,7 @@ nav {
     color: var(--text-secondary);
     text-decoration: none;
     transition: color 0.3s ease;
+    justify-content: center;
 }
 
 .contact-link:hover {
@@ -190,7 +195,7 @@ nav {
 
 /* About Section */
 .about-section {
-    padding: 6rem 2rem;
+    padding: 1.5rem 0.5rem;
     background: rgba(22, 27, 34, 0.7);
 }
 
@@ -204,7 +209,8 @@ nav {
 
 /* Projects Section */
 .projects-section {
-    padding: 6rem 2rem;
+    padding: 1.5rem 0.5rem;
+    margin-top: -250px;
 }
 
 .projects-grid {
@@ -257,10 +263,11 @@ nav {
 }
 
 .project-description {
-    color: var(--text-secondary);
+    color: white;
     font-size: 1rem;
     line-height: 1.6;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .project-tech {
@@ -309,7 +316,7 @@ nav {
 
 /* Apps Section */
 .apps-section {
-    padding: 6rem 2rem;
+    padding: 1.5rem 0.5rem;
     min-height: calc(100vh - 70px);
 }
 
@@ -451,7 +458,7 @@ nav {
 
 /* Contact Section */
 .contact-section {
-    padding: 6rem 2rem;
+    padding: 1.5rem 0.5rem;
     background: rgba(22, 27, 34, 0.7);
 }
 
@@ -503,6 +510,9 @@ footer {
     align-items: center;
     gap: 1rem;
     padding: 2rem 0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .social-links {
@@ -515,7 +525,7 @@ footer {
 
 .social-link {
     color: var(--text-secondary);
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     transition: all 0.3s ease;
 }
 
@@ -535,6 +545,11 @@ footer {
     opacity: 0.8;
     text-align: center;
 }
+
+.copyright{
+    text-align: center;
+}
+
 
 @media (max-width: 768px) {
     .profile-card {
@@ -603,6 +618,22 @@ footer {
     .project-image img, .app-logo {
         width: 80px;
         height: 80px;
+    }
+
+    .projects-section {
+        margin-top: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .projects-section {
+        margin-top: -125px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1600px) {
+    .projects-section {
+        margin-top: -200px;
     }
 }
 
